@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.personal.login.Login;
@@ -19,7 +20,8 @@ public class LoginActivity extends AppCompatActivity implements Login.Vista {
     //*** declaracion de varibles  ****
 
     private EditText txt_email, txt_password;
-    private Button btn_singin,btn_registrar_L;
+    private Button btn_singin;
+    private TextView btn_registrar_L;
     private ProgressBar progress_bar;
     private Login.Presentador presentador;
 
@@ -107,6 +109,7 @@ public class LoginActivity extends AppCompatActivity implements Login.Vista {
     public boolean isvalidPassword() {
         if (TextUtils.isEmpty(txt_password.getText().toString()) && txt_password.getText().toString().length() < 4) {
             Toast.makeText(this, "No es una contraseña correcta", Toast.LENGTH_SHORT).show();
+
             txt_password.setError("No es una contraseña Valida");
             return false;
         } else {
@@ -117,6 +120,7 @@ public class LoginActivity extends AppCompatActivity implements Login.Vista {
     @Override
     public void onLogin() {
         Toast.makeText(this, "Has hecho login correctamente", Toast.LENGTH_SHORT).show();
+        startActivity( new Intent(this,MenuoneActivity.class));
 
     }
 

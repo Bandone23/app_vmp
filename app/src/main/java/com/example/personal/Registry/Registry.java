@@ -1,5 +1,7 @@
 package com.example.personal.Registry;
 
+import android.view.View;
+
 public interface Registry {
 
     interface  Vista {
@@ -21,6 +23,8 @@ public interface Registry {
         void onRegistry();
 
         void onError(String error);
+
+        void previousActivity();
 
     }
 

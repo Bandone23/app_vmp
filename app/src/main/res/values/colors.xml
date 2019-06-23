@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorbutton">#590000</color>
+    <color name="colorTbutton">#FFFFFF</color>
+    <color name="colorTEdittext">#020202</color>
+    <color name="colorFondo">#B42824</color>
 </resources>

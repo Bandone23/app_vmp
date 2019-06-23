@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFondo"
     tools:context=".RegistryActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/colorTbutton"
         android:text="Registro usuario"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,22 +24,28 @@
 
     <EditText
         android:id="@+id/etxt_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittextformat"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
+        android:textColor="@color/colorTEdittext"
+        android:textColorHint="@color/colorTEdittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/etxt_emailr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
+        android:textColorHint="@color/colorTEdittext"
+        android:textColor="@color/colorTEdittext"
+        android:background="@drawable/edittextformat"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
@@ -50,14 +58,17 @@
 
     <EditText
         android:id="@+id/etxt_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/colorTEdittext"
+        android:textColorHint="@color/colorTEdittext"
+        android:background="@drawable/edittextformat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxt_emailr" />
@@ -67,12 +78,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/buttonformat"
         android:text="Registrar"
+        android:textColor="@color/colorTbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="547dp"
         app:layout_constraintTop_toBottomOf="@+id/progressBar2" />/>
 
     <ProgressBar

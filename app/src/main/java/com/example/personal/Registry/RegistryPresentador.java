@@ -26,6 +26,7 @@ public class RegistryPresentador implements Registry.Presentador,Registry.TaskLi
         }
         modelo.doRegistry(name,email, password);
 
+
     }
 
     @Override
@@ -34,6 +35,7 @@ public class RegistryPresentador implements Registry.Presentador,Registry.TaskLi
             vista.enableImputs();
             vista.hideProgress();
             vista.onRegistry();
+            vista.previousActivity();
         }
 
     }
