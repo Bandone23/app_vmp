@@ -56,4 +56,28 @@ public class MenuonePresentador  implements Menuone.Presentador,Menuone.TaskList
         }
 
     }
+
+    @Override
+    public void presultFireb(String dato) {
+        if (vista != null){
+            vista.resultFireb( dato);
+        }
+
+    }
+
+    @Override
+    public void perrorFirebase(String error) {
+        if (vista != null){
+            vista.errorFirebase("Error desde Firebase");
+        }
+
+    }
+
+    @Override
+    public void ponSucessSave() {
+        if (vista != null){
+
+        }
+
+    }
 }

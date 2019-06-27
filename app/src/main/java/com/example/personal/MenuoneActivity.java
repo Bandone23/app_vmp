@@ -94,16 +94,7 @@ public class MenuoneActivity extends AppCompatActivity  implements Menuone.Vista
 
     }
 
-    @Override
-    public boolean isvalidTpartido() {
-        if ( txt_tpartido.getText().toString().trim().equalsIgnoreCase("")){
-            Toast.makeText(this, "Por favor ingrese un tiempo por cuarto", Toast.LENGTH_SHORT).show();
-            return false;
 
-        } else
-
-            return true;
-    }
 
     @Override
     public boolean isvalidEquipos() {
@@ -124,6 +115,24 @@ public class MenuoneActivity extends AppCompatActivity  implements Menuone.Vista
     @Override
     public void vshowResult(String resultado) {
         txt_tpartido.setText(resultado + " : min");
+
+    }
+
+    @Override
+    public void resultFireb(String dato) {
+        Toast.makeText(this, "Se guardo correctamente el partido :"+ dato, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void errorFirebase(String error) {
+
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onSucessSave() {
 
     }
 
