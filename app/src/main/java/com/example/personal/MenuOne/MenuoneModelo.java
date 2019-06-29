@@ -1,11 +1,14 @@
 package com.example.personal.MenuOne;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,6 +20,7 @@ import java.util.Map;
 
 public class MenuoneModelo implements Menuone.Modelo {
 
+    private String TAGLOG;
     private Menuone.Presentador presentador ;
     private FirebaseDatabase database;
     private DatabaseReference reference ;
@@ -63,6 +67,7 @@ public class MenuoneModelo implements Menuone.Modelo {
                 if (task.isSuccessful()){
 
                     presentador.presultFireb(equipos);
+                    escuchoPartidos();
                 } else {
                     if (task.getException() != null)
 
@@ -71,6 +76,44 @@ public class MenuoneModelo implements Menuone.Modelo {
 
             }
         });
+
+    }
+
+    @Override
+    public void escuchoPartidos() {
+
+        reference = database.getInstance().getReference().child("Partidos");
+        ChildEventListener childEventListener= new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Log.d(TAGLOG, "onChildAdded: {" + dataSnapshot.getKey() + ": " + dataSnapshot.getValue() + "}");
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        };
+
+
+
+    }
+
 
 
 
@@ -118,9 +161,4 @@ public class MenuoneModelo implements Menuone.Modelo {
         });
 */
 
-
-
-
-
-    }
 }

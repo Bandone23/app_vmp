@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Personal</string>
+
+
+    <string-array name="Partidos">
+        <item>Papelera vs sippa</item>
+        <item>chivekano vs sippa</item>
+        <item>puente alto vs sippa</item>
+        <item>scuola vs sippa</item>
+        <item>Papelera vs sippa</item>
+
+    </string-array>
+    <string-array name="minutos_partidos">
+        <item>20 minutos</item>
+        <item>25 minutos</item>
+        <item>30 minutos</item>
+        <item>36 minutos</item>
+        <item>40 minutos</item>
+    </string-array>
+    <string-array name="fechas">
+        <item>20-07-2019</item>
+        <item>23-08-2019s</item>
+        <item>19-09-2019</item>
+        <item>22-10-2019</item>
+        <item>28-10-2019</item>
+    </string-array>
 </resources>

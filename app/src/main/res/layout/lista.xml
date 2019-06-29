@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_foto"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ball" />
+
+    <TextView
+        android:id="@+id/etxt_fecha_pL"
+        android:layout_width="127dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/colorTbutton"
+        android:text="Fecha del Partido :"
+        app:layout_constraintStart_toEndOf="@+id/img_foto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etxt_equiposL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:textColor="@color/colorTbutton"
+        android:text="Equipos :"
+        app:layout_constraintStart_toEndOf="@+id/img_foto"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_fecha_pL" />
+
+    <TextView
+        android:id="@+id/etxt_tpartidoL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/colorTbutton"
+        android:text="Tiempo de Partido :"
+        app:layout_constraintStart_toEndOf="@+id/etxt_fecha_pL"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

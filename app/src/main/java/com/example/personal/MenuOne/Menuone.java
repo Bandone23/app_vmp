@@ -28,6 +28,8 @@ public interface Menuone {
 
         void toPartido(String tcuarto, String tpartido, String equipos); // recibe los parametros del partido
 
+        void escuchoPartidosP();
+
         void pshowResult(String resultado); //View
 
         void presultFireb(String dato);
@@ -41,6 +43,8 @@ public interface Menuone {
     interface Modelo {
 
         void doPartido(String tcuarto, String tpartido, String equipos);
+
+        void escuchoPartidos();
 
     }
 

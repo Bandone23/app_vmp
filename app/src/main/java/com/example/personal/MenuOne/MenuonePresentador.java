@@ -29,6 +29,11 @@ public class MenuonePresentador  implements Menuone.Presentador,Menuone.TaskList
     }
 
     @Override
+    public void escuchoPartidosP() {
+
+    }
+
+    @Override
     public void onSucess() {
         if (vista!=null){
 
